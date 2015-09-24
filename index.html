@@ -190,18 +190,23 @@
 	          While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project.
 	        </blockquote>
 	      </section>
-	      <section>
-	        <h3>GitHub</h3>
-	        <h4>Get Local Repository of GitHub Repo</h4>
-	        <pre><code contenteditable class ="command-line">
-	cd ../ # Back in root directory
-	mkdir hello-github
-	cd hello-github
-	git init
-	git remote add origin git@github.com:username/NAME-OF-REPO
-	git pull origin master
-	        </code></pre>
-	      </section>
+        <section>
+          <h3>Cloning</h3>
+          <h4>Create a Local Copy of Repo</h4>
+          <pre><code contenteditable class ="command-line">
+cd ~/
+
+git clone https://github.com/username/FORKED-REPO-NAME.git
+
+cd FORKED-REPO-NAME
+
+git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+# Assigns the original repository to a remote called "upstream"
+
+git remote -v
+# Lists URL of remote repos
+        </code></pre>
+        </section>
 
         <section>
           <h3>Git Local Setup</h3>
@@ -470,24 +475,6 @@ git merge master
         <section>
           <h3>Forking</h3>
           <img src = "images/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
-        </section>
-        <section>
-          <h3>Forking</h3>
-          <h4>Cloning</h4>
-          <p>Clone to get a local repository of your fork
-          <pre><code contenteditable class ="command-line">
-cd ../
-
-git clone https://github.com/username/FORKED-REPO-NAME.git
-
-cd FORKED-REPO-NAME
-
-git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-# Assigns the original repository to a remote called "upstream"
-
-git fetch upstream
-# Pulls in changes not present in your local repository, without modifying your files
-          </code></pre>
         </section>
         <!-- Pull requests-->
         <section>
